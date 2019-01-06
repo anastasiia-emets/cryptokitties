@@ -1,6 +1,7 @@
 function Cat(options) {
   this.render = () => {
     return `
+<div class="wrapp">
         <div class="card-cat">
             <div class="card-cat-container">
                 <div class="card-cat-container__price">for sale = ${
@@ -14,7 +15,7 @@ function Cat(options) {
             <div class="card-cat__name">name ${options.name}</div>
             <div class="card-cat__category">category ${options.category}</div>
         </div>
-        
+</div>
         `;
   };
 }
@@ -156,7 +157,13 @@ const cathtml = [
 
   return cat.render();
 });
-document.querySelector("body").innerHTML = cathtml.join("");
+
+var wrapper = document.createElement("wrapper");
+document.body.appendChild(wrapper);
+wrapper.innerHTML = cathtml.join("");
+wrapper.style.display = "flex";
+
+wrapper.style.flexWrap = "wrap";
 
 function random_bg_color() {
   var x = Math.floor(Math.random() * 256);
