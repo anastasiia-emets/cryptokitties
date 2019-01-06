@@ -1,0 +1,11 @@
+@import "variables";
+@import "mixins";
+@import "../cat/cat";
+
+.main-conainer{
+	width: 100%;
+	grid-column: 300px 300px 300px 300px;
+	grid-row: 500px 500px 500px;
+	position: relative;
+  display: grid;
+}
