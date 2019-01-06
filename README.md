@@ -1,7 +1,7 @@
 # cryptokitties
 Cryptokitties
 It is a very simple internet store where you can search and buy kitten) You can use it to create mini store for a variety of goods. The reference project is - https://www.cryptokitties.co/search  
-[See result here](https://anastasiia-emets.github.io/cryptokitties/)
+[See result here](https://anastasiia-emets.github.io/cryptokitties/dist/index.html)
 # technology
 - pug
 - scss
