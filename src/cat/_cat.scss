@@ -1,0 +1,51 @@
+.card-cat--color-blue .card-cat-main{
+	background-color:#a2c2eb;
+}
+.card-cat--color-pink .card-cat-main{
+	background-color:#e7c3bb;
+}
+.card-cat--color-yellow .card-cat-main{
+	background-color:#dfdc47;
+}
+.card-cat--color-fucia .card-cat-main{
+	background-color:#e262d1;
+}
+.card-cat-container{
+	background-color:lightpink;
+	width: 230px;
+  height: 280px;
+	border-radius: .8rem;
+	display:flex;
+	flex-direction: column;
+
+	&__price{
+		margin-top:10px;
+		width: 130px;
+		height: 16px;
+		background-color:white;
+		margin:0 auto;
+		color:black;
+		text-align:center;
+	}
+	
+}
+.card-cat{
+	width: 230px;
+	height: 400px;
+	
+
+	&__id{
+		color:black;
+		text-align:center;
+	}
+	&__name{
+		color:black;
+		text-align:center;
+
+	}
+	&__category{
+		color:black;
+		text-align:center;
+
+	}
+}
