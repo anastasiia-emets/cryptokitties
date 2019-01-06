@@ -37,3 +37,11 @@
 
 	}
 }
+div img {
+    display: block; 
+    transition: 1s; 
+   }
+   div img:hover {
+    transform: scale(1.3); 
+   }
+
