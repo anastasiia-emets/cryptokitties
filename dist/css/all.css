@@ -23,6 +23,7 @@
  .card-cat {
      width: 230px;
      height: 400px;
+     padding:40px;
 }
  .card-cat__id {
      color: black;
