@@ -18,6 +18,8 @@ function Cat(options) {
 </div>
         `;
   };
+  const cardContainers = document.querySelectorAll(".card-cat-container");
+  
 }
 const cathtml = [
   {
@@ -154,7 +156,6 @@ const cathtml = [
   }
 ].map(catOptions => {
   const cat = new Cat(catOptions);
-
   return cat.render();
 });
 
@@ -162,17 +163,18 @@ var wrapper = document.createElement("wrapper");
 document.body.appendChild(wrapper);
 wrapper.innerHTML = cathtml.join("");
 wrapper.style.display = "flex";
-
 wrapper.style.flexWrap = "wrap";
+wrapper.style.justifyContent = "space-between"; 
+
 
 function random_bg_color() {
   var x = Math.floor(Math.random() * 256);
   var y = Math.floor(Math.random() * 256);
   var z = Math.floor(Math.random() * 256);
   var bgColor = "rgb(" + x + "," + y + "," + z + ")";
-
   return bgColor;
 }
+
 const cardContainers = document.querySelectorAll(".card-cat-container");
 [...cardContainers].forEach(element => {
   element.style.backgroundColor = random_bg_color();

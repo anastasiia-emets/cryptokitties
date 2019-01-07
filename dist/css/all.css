@@ -1,55 +1,63 @@
 .card-cat-container {
-     background-color: lightpink;
-     width: 230px;
-     height: 280px;
-     border-radius: .8rem;
-     display: -webkit-box;
-     display: -ms-flexbox;
-     display: flex;
-     -webkit-box-orient: vertical;
-     -webkit-box-direction: normal;
-     -ms-flex-direction: column;
-     flex-direction: column;
+  background-color: lightpink;
+  width: 230px;
+  height: 280px;
+  border-radius: .8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
- .card-cat-container__price {
-     margin-top: 10px;
-     width: 130px;
-     height: 16px;
-     background-color: white;
-     margin: 0 auto;
-     color: black;
-     text-align: center;
+
+.card-cat-container__price {
+  margin-top: 10px;
+  width: 130px;
+  height: 16px;
+  background-color: white;
+  margin: 0 auto;
+  color: black;
+  text-align: center;
 }
- .card-cat {
-     width: 230px;
-     height: 400px;
-     padding:40px;
+
+.card-cat {
+  width: 230px;
+  height: 400px;
+  padding: 40px;
 }
- .card-cat__id {
-     color: black;
-     text-align: center;
+
+.card-cat__id {
+  color: black;
+  text-align: center;
 }
- .card-cat__name {
-     color: black;
-     text-align: center;
+
+.card-cat__name {
+  color: black;
+  text-align: center;
 }
- .card-cat__category {
-     color: black;
-     text-align: center;
+
+.card-cat__category {
+  color: black;
+  text-align: center;
 }
- .main-conainer {
-     width: 100%;
-     grid-column: 300px 300px 300px 300px;
-     grid-row: 500px 500px 500px;
-     position: relative;
-     display: grid;
-}
+
 div img {
-    display: block; 
-    transition: 1s; 
-   }
-   div img:hover {
-    transform: scale(1.3); 
-   }
+  display: block;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
 
+div img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
 
+.main-conainer {
+  width: 100%;
+  grid-column: 300px 300px 300px 300px;
+  grid-row: 500px 500px 500px;
+  position: relative;
+  display: grid;
+}
