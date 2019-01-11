@@ -54,10 +54,18 @@ div img:hover {
           transform: scale(1.3);
 }
 
-.main-conainer {
-  width: 100%;
-  grid-column: 300px 300px 300px 300px;
-  grid-row: 500px 500px 500px;
-  position: relative;
-  display: grid;
+.wrapp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
 }
