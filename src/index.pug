@@ -4,8 +4,15 @@ html(lang='en')
         meta(charset="UTF-8")
         title Cat
         link(rel="stylesheet" href="css/all.css")
+
         script(src = " https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js ")
         script(async src="https://cdn.jsdelivr.net/npm/vanilla-ripplejs@1.0.6" integrity="sha384-OlarGErerEgz/M7123pQTTek4pUIiR6t0BK09bTmWDi2cZYbv3VHrriaXDnA0Oup" crossorigin="anonymous")
     body
-        .wrapp
-        script(src="js/script.js")
+
+
+    .overlay(id='loader')
+        .loader.ball-grid-pulse 
+            div
+           
+    .wrapp
+    script(src="js/script.js")
