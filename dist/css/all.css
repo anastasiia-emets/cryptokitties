@@ -96,7 +96,7 @@ div img:hover {
   }
 }
 
-.card-cat-container {
+.card-cat {
   opacity: 0;
   -webkit-animation: fadeInUp 0.5s ease-in-out 0s forwards;
           animation: fadeInUp 0.5s ease-in-out 0s forwards;
