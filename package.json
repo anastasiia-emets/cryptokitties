@@ -23,7 +23,8 @@
     "run-sequence": "^2.2.1"
   },
   "dependencies": {
-    "tiny-slider": "^2.8.8"
+    "tiny-slider": "^2.8.8",
+    "vanilla-ripplejs": "^1.0.6"
   },
   "description": ""
 }

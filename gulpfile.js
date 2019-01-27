@@ -1,7 +1,6 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
-const clean = require('gulp-clean');
 const concat = require('gulp-concat');
 const runSequence = require('run-sequence');
 const browserSync = require('browser-sync').create();
@@ -20,7 +19,7 @@ gulp.task('default', function () {
 
 gulp.task('build', function () {
     return runSequence(
-        'cleanDist',
+       
         ['processStyles', 'processHtml', 'processImages', 'processJs']
     );
 });
@@ -54,9 +53,7 @@ gulp.task('serve', function () {
 
 });
 
-gulp.task('cleanDist', function () {
-    return gulp.src(distDirectory, {read: false, allowEmpty: true}).pipe(clean());
-});
+
 
 gulp.task('processPugFiles', function () {
     return gulp.src('src/**/*.pug');

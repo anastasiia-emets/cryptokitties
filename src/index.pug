@@ -4,15 +4,51 @@ html(lang='en')
         meta(charset="UTF-8")
         title Cat
         link(rel="stylesheet" href="css/all.css")
-
+        k(rel="stylesheet" href="css/da-library.css")
+        link(rel="icon" type="image/png" href="images/da-logo.png")
         script(src = " https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js ")
         script(async src="https://cdn.jsdelivr.net/npm/vanilla-ripplejs@1.0.6" integrity="sha384-OlarGErerEgz/M7123pQTTek4pUIiR6t0BK09bTmWDi2cZYbv3VHrriaXDnA0Oup" crossorigin="anonymous")
+        script(src="js/da-lib.js")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
     body
 
 
     .overlay(id='loader')
         .loader.ball-grid-pulse 
             div
-           
+    .cats-options
+        .cats-options__search-line
+            .cats-options__search
+                input(class="da-inputs_simple da-inputs_style" placeholder= " Search" type="text" required)
+                
+                
+              
+             
+        
+        .cats-options__filter-option.hidden
+            .cats-options__filter-option_name Cooldown:
+            button(class="da-icon-button__el da-icon-button__style") Snappy
+            button(class="da-icon-button__el da-icon-button__style") Brisk
+            button(class="da-icon-button__el da-icon-button__style") Plodding
+            button(class="da-icon-button__el da-icon-button__style") Slow
+            button(class="da-icon-button__el da-icon-button__style") Sluggish
+            button(class="da-icon-button__el da-icon-button__style") Catatonic
+
+    .shopping-cart
+        .shopping-cart-head
+            span(class="cats-quantity") 0 Cat(s) in Cart
+      
+        ul(class="shopping-cart-list")
+   
+        .cart-buttons
+            a(href="#0" class="button empty-cart-btn") Empty
+            a(href="#0" class="button cart-checkout") 
+     
+
+        
     .wrapp
+    .page-navigation
+        span.page-navigation__prev.disabled Previous
+        span.page-navigation__next Next
+        
     script(src="js/script.js")
