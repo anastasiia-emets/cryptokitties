@@ -8,7 +8,7 @@ html(lang='en')
         link(rel="icon" type="image/png" href="images/da-logo.png")
         script(src = " https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js ")
         script(async src="https://cdn.jsdelivr.net/npm/vanilla-ripplejs@1.0.6" integrity="sha384-OlarGErerEgz/M7123pQTTek4pUIiR6t0BK09bTmWDi2cZYbv3VHrriaXDnA0Oup" crossorigin="anonymous")
-        script(src="js/da-lib.js")
+      
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
     body
 
@@ -19,8 +19,9 @@ html(lang='en')
     .cats-options
         .cats-options__search-line
             .cats-options__search
-                input(class="da-inputs_simple da-inputs_style" placeholder= " Search" type="text" required)
-                
+                form(id="search")
+                    input(class="da-inputs_simple da-inputs_style" placeholder= " Search" type="text" name="search" required)
+            
                 
               
              
@@ -48,7 +49,8 @@ html(lang='en')
         
     .wrapp
     .page-navigation
-        span.page-navigation__prev.disabled Previous
-        span.page-navigation__next Next
+        button.button_prev.disabled Previous
+        button.button_next Next
+        
         
     script(src="js/script.js")
