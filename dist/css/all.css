@@ -2400,7 +2400,7 @@ body {
   float: right;
 }
 
-.card-cat_n {
+.card-oneCat {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2409,6 +2409,9 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 auto;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 2%;
 }
 
 .shopping-cart {
@@ -2422,9 +2425,38 @@ body {
   background: wheat;
 }
 
-.card-cat-container_n {
-  width: 600px;
+.card-oneCat__button {
+  width: 5%;
+  height: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0 auto;
+}
+
+.card-oneCat__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+  background-color: lightblue;
+}
+
+.card-oneCat__id {
+  font-weight: 800;
+}
+
+.card-oneCat__container_img {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .shopping-cart-head {

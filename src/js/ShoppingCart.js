@@ -14,6 +14,7 @@ export class ShoppingCart {
   }
 
   renderCart() {
+		
     document.querySelector('.cart').innerHTML = `
       <ul>
         <li></li

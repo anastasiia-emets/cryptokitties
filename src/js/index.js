@@ -7,6 +7,7 @@ let pageInclude = "sale";
 let pageOrderBy = "current_price";
 let pageOrderDirection = "asc";
 let pageSearch = "";
+
 async function loading_page() {
 	let pageLimit = 12;
 	let loader = document.getElementById('loader');
@@ -37,6 +38,42 @@ async function loading_page() {
 		}
 		renderCats(filteredCats);
 	});
+	function renderCats(cats) {
+		document.querySelector('.cats-info').innerHTML =
+			cats.map(cat => {
+				return `
+          <div class="wrapp1">
+            <div class="card-cat">
+                <div class="card-cat-container">
+                  <div class="card-cat-container__price">for sale = ${ cat.price}</div>
+                  <img class="card-container-cat__image-cat" alt="cat" src="${cat.image_url}">             </div>
+                <div class="card-cat__id">id #${cat.id}</div>
+                <div class="card-cat__name">name ${cat.name}</div>
+                <div class="card-cat__category">category ${cat.category}</div>
+                <div class="cat-add-to-cart">
+                  <a class="button see-more">More Details</a>
+                  <button class="button add-to-cart" data-id=${cat.id}>Add to Cart</button>             </div>
+                </div>
+          </div>
+         ` })
+				.join('');
+
+	}
+	function MarkupPage(cat) {
+	
+		document.querySelector('.cat-info').innerHTML =
+		 ` 
+            <div class="card-oneCat">
+                <div class="card-oneCat__container">               
+									<img class="card-oneCat__container_img" alt="cat" src="${cat.image_url}">             
+								</div>
+                <div class="card-oneCat__id">id #${cat.id}</div>
+                <div class="card-oneCat__name">name ${cat.name}</div>           
+								<button class="card-oneCat__button add-to-cart" data-id=${cat.id}>Add to Cart</button>             							
+            </div>
+          
+         `
+	};
 
 
 	document.querySelector('.snappy').addEventListener('click', (event) => {
@@ -95,7 +132,6 @@ async function loading_page() {
 		renderCats(FastCats);
 	});
 
-
 	document.querySelector('.shift').addEventListener('click', (event) => {
 		let ShiftCats;
 		ShiftCats = list.filter((cat) => {
@@ -103,18 +139,29 @@ async function loading_page() {
 		});
 		renderCats(ShiftCats);
 	});
+	
+	
+	document.addEventListener('click', (e) => {
+		if (e.target.matches('.button-see-more')) {
 
-	document.querySelector('.see-more').addEventListener('click', (event) => {
-		let catsl = document.querySelector(".cats-info");
-		catsl.classList.add('disable');
-		var catl = document.querySelector(".cat-info")
-		catl.classList.add('block');
-		document.querySelector('.cat-info').innerHTML = kitten.getKittenOneMarkup();
+			document.querySelector(".cats-info").classList.add('disable');	
+			document.querySelector(".cats-options").classList.add('disable');	
+			document.querySelector(".page-navigation").classList.add('disable');	
+			document.querySelector(".cat-info").classList.add('block');
+	
+			const katId = e.target.dataset.id;
+			console.log(katId);
 
+			let katWithId;
+			katWithId = list.filter((cat) => {
+				return cat.id = katId;
+			});
+			MarkupPage(katWithId);
+		}
 	});
+	
 
 }
-
 
 
 document.addEventListener("DOMContentLoaded", loading_page);
@@ -124,16 +171,10 @@ document.addEventListener("DOMContentLoaded", loading_page);
 	loading_page();
 }));
 
+
 [...document.getElementsByClassName("button_prev")].forEach(button => button.addEventListener('click', () => {
 
 	if (pageOffset === 0) return;
 	pageOffset -= 12;
 	loading_page();
 }));
-
-
-
-
-
-
-

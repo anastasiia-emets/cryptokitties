@@ -54,7 +54,7 @@ export class Kitten {
             <div class="card-cat__name">name ${cat.name}</div>
             <div class="card-cat__category"><img class="paw" alt="p" src="images/paw.svg"> ${category}</div>
             <div class="cat-add-to-cart">
-							<button class="button see-more">More Details</button>
+							<button class="button-see-more">More Details</button>
               <button class="button add-to-cart" data-id=${cat.id}>Add to Cart</button>
             </div>
         </div>
@@ -71,47 +71,6 @@ export class Kitten {
     }
     return hash;
 	};
-	getOneMarkup() {
-    const cat = this.cat;
-    const hashNumber = Math.abs(this._hashCode(cat.name));
-    const arrayNumber = hashNumber % this.colors.length;
-    const catColor = this.colors[arrayNumber];
-    const auction = cat.auction;
-    const exactPrice = auction.current_price / 100000000000000000;
-    let price;
-    if (exactPrice.toString().charAt(4) !== '') {
-      price = exactPrice.toFixed(3);
-    } else {
-      price = exactPrice.toFixed(2);
-    }
-    let cooldown = cat.status.cooldown_index;
-    
-    return `
-<div class="wrapp1">
-        <div class="card-cat">
-            <div class="card-cat-container" style="background-color: ${catColor}">
-                <div class="card-cat-container__price"><img class="tag" alt="p" src="images/tag.svg"> for sale = ${price}
-      </div>
-                <img class="card-container-cat__image-cat" alt="cat" src="${
-      cat.image_url
-      }">
-            </div>
-            <div class="card-cat__id"> # ${cat.id}</div>
-            <div class="card-cat__name">name ${cat.name}</div>
-            <div class="cat-add-to-cart">
-			
-              <button class="button add-to-cart" data-id=${cat.id}>Add to Cart</button>
-            </div>
-        </div>
-</div>
-        `;
-	}
-	getKittenOneMarkup() {
-   
-      const kitten = new Kitten(cat);
-      return kitten.getMarkup();
-    
-      
-	}
+	
  
 }
