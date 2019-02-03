@@ -2351,6 +2351,22 @@ div img:hover {
   height: 100%;
 }
 
+.cats-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .hidden {
   display: none;
 }
@@ -2453,4 +2469,126 @@ body {
 
 .cart-checkout {
   background: limegreen;
+}
+
+.disable {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.card-cat-container__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 8%;
+  padding: 2%;
+}
+
+.tag {
+  margin: 2%;
+}
+
+.card-cat__id {
+  font-weight: 800;
+}
+
+.card-cat__category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.paw {
+  margin-right: 2%;
+}
+
+.cats-options__filter-option_name {
+  color: pink;
+  font-size: 35px;
+  margin-left: 30px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.da-icon-button__el {
+  margin-left: 8%;
+  background-color: burlywood;
+}
+
+.cats-options__filter-option_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+  margin-left: 2%;
+}
+
+.cats-options__filter-option_button {
+  background-color: bisque;
+  margin-top: 2%;
+  font-size: 20px;
+}
+
+.cats-options__filter-option_button:hover {
+  background-color: lightgrey;
+}
+
+.card-cat__name {
+  font-style: italic;
+}
+
+.button_prev {
+  background-color: lightcoral;
+  color: white;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+}
+
+.button_next {
+  background-color: lightcoral;
+  color: white;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+}
+
+.page-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 40px;
+}
+
+body {
+  background-color: #fafaff;
+}
+
+button {
+  border: 0;
+}
+
+button:hover {
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+}
+
+.add-to-cart {
+  border: 10%;
+  background-color: lightblue;
 }

@@ -2,49 +2,51 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Cat</title>
+    <title>CryptoKitties</title>
     <link rel="stylesheet" href="css/all.css">
-    <k rel="stylesheet" href="css/da-library.css"></k>
-    <link rel="icon" type="image/png" href="images/da-logo.png">
+    <link rel="stylesheet" href="css/da-library.css">
+    <link rel="icon" type="image/png" href="images/logo-hover.gif">
     <script src=" https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js "></script>
-    <script async src="https://cdn.jsdelivr.net/npm/vanilla-ripplejs@1.0.6" integrity="sha384-OlarGErerEgz/M7123pQTTek4pUIiR6t0BK09bTmWDi2cZYbv3VHrriaXDnA0Oup" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="module" src="js/index.js" defer></script>
   </head>
-  <body></body>
-  <div class="overlay" id="loader">
-    <div class="loader ball-grid-pulse"> 
-      <div></div>
-    </div>
-  </div>
-  <div class="cats-options">
-    <div class="cats-options__search-line">
-      <div class="cats-options__search">
-        <form id="search">
-          <input class="da-inputs_simple da-inputs_style" placeholder=" Search" type="text" name="search" required>
-        </form>
+  <body>
+    <div class="overlay" id="loader">
+      <div class="loader ball-grid-pulse"> 
+        <div></div>
       </div>
     </div>
-    <div class="cats-options__filter-option">
-      <div class="cats-options__filter-option_name">Category:</div>
-      <button class="da-icon-button__el da-icon-button__style snappy">Snappy</button>
-      <button class="da-icon-button__el da-icon-button__style brisk">Brisk</button>
-      <button class="da-icon-button__el da-icon-button__style plodding">Plodding</button>
-      <button class="da-icon-button__el da-icon-button__style slow">Slow</button>
-      <button class="da-icon-button__el da-icon-button__style sluggish">Sluggish</button>
-      <button class="da-icon-button__el da-icon-button__style catatonic">Catatonic</button>
-      <button class="da-icon-button__el da-icon-button__style fast">Fast</button>
-      <button class="da-icon-button__el da-icon-button__style shift">Swift</button>
+    <div class="cats-options">
+      <div class="cats-options__search-line">
+        <div class="cats-options__search">
+          <form id="search">
+            <input class="da-inputs_simple da-inputs_style" placeholder="Search name" type="text" name="search" required>
+          </form>
+        </div>
+      </div>
+      <div class="cats-options__filter-option">
+        <div class="cats-options__filter-option_name">Category:</div>
+        <div class="cats-options__filter-option_buttons">
+          <button class="cats-options__filter-option_button snappy">Snappy</button>
+          <button class="cats-options__filter-option_button brisk">Brisk</button>
+          <button class="cats-options__filter-option_button plodding">Plodding</button>
+          <button class="cats-options__filter-option_button slow">Slow</button>
+          <button class="cats-options__filter-option_button sluggish">Sluggish</button>
+          <button class="cats-options__filter-option_button catatonic">Catatonic</button>
+          <button class="cats-options__filter-option_button fast">Fast</button>
+          <button class="cats-options__filter-option_button shift">Swift</button>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="shopping-cart">
-    <div class="shopping-cart-head"><span class="cats-quantity">0 Cat(s) in Cart</span></div>
-    <ul class="shopping-cart-list"></ul>
-    <div class="cart-buttons"><a class="button empty-cart-btn" href="#0">Empty</a><a class="button cart-checkout" href="#0"> </a></div>
-  </div>
-  <div class="wrapp"></div>
-  <div class="page-navigation">
-    <button class="button_prev disabled">Previous</button>
-    <button class="button_next">Next</button>
-  </div>
-  <script src="js/script.js"></script>
+    <div class="shopping-cart">
+      <div class="shopping-cart-head"><span class="cats-quantity">0 Cat(s) in Cart</span></div>
+      <ul class="shopping-cart-list"></ul>
+      <div class="cart-buttons"><a class="button empty-cart-btn" href="#0">Empty</a><a class="button cart-checkout" href="#0"> </a></div>
+    </div>
+    <div class="cats-info"></div>
+    <div class="page-navigation">
+      <button class="button_prev disabled">&#8249 </button>
+      <button class="button_next">&#8250</button>
+    </div>
+    <div class="cat-info disable"></div>
+  </body>
 </html>

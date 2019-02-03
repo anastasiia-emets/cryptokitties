@@ -2,57 +2,53 @@ doctype html
 html(lang='en')
     head
         meta(charset="UTF-8")
-        title Cat
+        title CryptoKitties
         link(rel="stylesheet" href="css/all.css")
-        k(rel="stylesheet" href="css/da-library.css")
-        link(rel="icon" type="image/png" href="images/da-logo.png")
+        link(rel="stylesheet" href="css/da-library.css")
+        link(rel="icon" type="image/png" href="images/logo-hover.gif")
         script(src = " https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js ")
-        script(async src="https://cdn.jsdelivr.net/npm/vanilla-ripplejs@1.0.6" integrity="sha384-OlarGErerEgz/M7123pQTTek4pUIiR6t0BK09bTmWDi2cZYbv3VHrriaXDnA0Oup" crossorigin="anonymous")
+        script(type="module" src="js/index.js" defer)
       
-        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
     body
 
+        .overlay(id='loader')
+            .loader.ball-grid-pulse 
+                div
+        .cats-options
+            .cats-options__search-line
+                .cats-options__search
+                    form(id="search")
+                        input(class="da-inputs_simple da-inputs_style" placeholder= "Search name" type="text" name="search" required)
+            .cats-options__filter-option
+                .cats-options__filter-option_name Category:
+                .cats-options__filter-option_buttons
+                    button(class="cats-options__filter-option_button snappy") Snappy
+                    button(class="cats-options__filter-option_button brisk") Brisk
+                    button(class="cats-options__filter-option_button plodding") Plodding
+                    button(class="cats-options__filter-option_button slow") Slow
+                    button(class="cats-options__filter-option_button sluggish") Sluggish
+                    button(class="cats-options__filter-option_button catatonic") Catatonic
+                    button(class="cats-options__filter-option_button fast") Fast
+                    button(class="cats-options__filter-option_button shift") Swift
 
-    .overlay(id='loader')
-        .loader.ball-grid-pulse 
-            div
-    .cats-options
-        .cats-options__search-line
-            .cats-options__search
-                form(id="search")
-                    input(class="da-inputs_simple da-inputs_style" placeholder= " Search" type="text" name="search" required)
+        .shopping-cart
+            .shopping-cart-head
+                span(class="cats-quantity") 0 Cat(s) in Cart
+        
+            ul(class="shopping-cart-list")
+    
+            .cart-buttons
+                a(href="#0" class="button empty-cart-btn") Empty
+                a(href="#0" class="button cart-checkout") 
+        
+
             
-                
-              
-             
-        
-        .cats-options__filter-option
-            .cats-options__filter-option_name Category:
-            button(class="da-icon-button__el da-icon-button__style snappy") Snappy
-            button(class="da-icon-button__el da-icon-button__style brisk") Brisk
-            button(class="da-icon-button__el da-icon-button__style plodding") Plodding
-            button(class="da-icon-button__el da-icon-button__style slow") Slow
-            button(class="da-icon-button__el da-icon-button__style sluggish") Sluggish
-            button(class="da-icon-button__el da-icon-button__style catatonic") Catatonic
-            button(class="da-icon-button__el da-icon-button__style fast") Fast
-            button(class="da-icon-button__el da-icon-button__style shift") Swift
+        .cats-info
 
-    .shopping-cart
-        .shopping-cart-head
-            span(class="cats-quantity") 0 Cat(s) in Cart
-      
-        ul(class="shopping-cart-list")
-   
-        .cart-buttons
-            a(href="#0" class="button empty-cart-btn") Empty
-            a(href="#0" class="button cart-checkout") 
-     
 
+        .page-navigation
+            button.button_prev.disabled &#8249 
+            button.button_next &#8250
         
-    .wrapp
-    .page-navigation
-        button.button_prev.disabled Previous
-        button.button_next Next
-        
-        
-    script(src="js/script.js")
+        .cat-info.disable
+
