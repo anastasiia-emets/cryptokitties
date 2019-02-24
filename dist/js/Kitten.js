@@ -50,12 +50,12 @@ export class Kitten {
       cat.image_url
       }">
             </div>
-            <div class="card-cat__id"> # ${cat.id}</div>
+            <div class="card-cat__id" data-id="${cat.id}"> # ${cat.id}</div>
             <div class="card-cat__name">name ${cat.name}</div>
             <div class="card-cat__category"><img class="paw" alt="p" src="images/paw.svg"> ${category}</div>
             <div class="cat-add-to-cart">
-							<button class="button-see-more">More Details</button>
-              <button class="button add-to-cart" data-id=${cat.id}>Add to Cart</button>
+							<button class="button-see-more" data-id="${cat.id}">More Details</button>
+              <button class="button add-to-cart" data-id="${cat.id}">Add to Cart</button>
             </div>
         </div>
 </div>
